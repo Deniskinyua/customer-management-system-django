@@ -9,7 +9,8 @@ The application works as follows:
 
 1. so,the user (shop owner / staff) registers at the login page. They can do so in 3 ways: via django authentication, or OpenID via Facebook and Github.
 Once logged in, they are met with a dashboard displaying different items:
-- The output of the program should be:
+
+2. The output of the program should be:
   - The number, followed by
     - if the number is greater than 0: is positive
     - if the number is 0: is zero
