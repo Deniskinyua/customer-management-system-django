@@ -7,8 +7,9 @@ The application works as follows:
 
 > But first, imagine this: You own a shop selling different items for example phones, accessories e.t.c. You would like to have an in-house system that helps yomanage customer orders, right? perfect. I have the right solution for you.
 
->    1. so,the user (shop owner / staff) registers at the login page. They can do so in 3 ways:
->           - via django authentication, or OpenID via Facebook and Github.
+>    1. so,the user (shop owner / staff) registers at the login page. They can do so in 2 ways:
+>       - via django authentication,
+>       - OpenID via Facebook and Github.
 Once logged in, they are met with a dashboard displaying different items:
 
 2. The output of the program should be:
