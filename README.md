@@ -13,9 +13,9 @@ The application works as follows:
 - Once logged in, they are met with a dashboard displaying different items:
 
 >    2. The output of the program should be:
-        - A `dashbaord preview`: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
-        - A complete `statistics dashboard` : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
-        - `Invoice creation page` : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
+        -        A `dashbaord preview`: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
+        -        A complete `statistics dashboard` : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
+        -        `Invoice creation page` : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
 
 >    3. User clicks the create invoices button, and is transferred to an invoice creattion page
 
