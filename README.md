@@ -1,4 +1,4 @@
-## Customer Management System with Django
+## Customer Management System with Django   :heart:
 
 ### Project Description
 Welcome to my project where i build a django application with Docker.
@@ -87,5 +87,5 @@ Vuala!
 - UI Design
 - Internal feature improvement
 
-@octocat :+1:  :shipit:
+Happy coding :nerd_face: . bye :wave:
 
