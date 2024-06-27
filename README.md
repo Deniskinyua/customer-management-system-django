@@ -11,16 +11,10 @@ The application works as follows:
 Once logged in, they are met with a dashboard displaying different items:
 
 2. The output of the program should be:
-    - The number, followed by
-    - if the number is greater than 0: is positive
-    - if the number is 0: is zero
+    - A `dashbaord preview`: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
+    - A complete `statistics dashboard` : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
+    - `Invoice creation page` : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
     - if the number is less than 0: is negative
-  - followed by a new line
-  - :wq
-  - 
-   _ A dashbaord preview: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
-   _ A complete statistics dashboard : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
-   _ Invoice creation page : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
 3. User clicks the create invoices button, and is transferred to an invoice creattion page
 4. They enter the details of the entry (notice that you can add colums if more entries are required per customer)
 5. The entry autocalculates all entries into one entry ( you dont want to have too many reciepts for just one order)
