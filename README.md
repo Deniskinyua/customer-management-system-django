@@ -10,7 +10,7 @@ The application works as follows:
 >    1. so,the user (shop owner / staff) registers at the login page. They can do so in 2 ways:
 >       - via django authentication,
 >       - OpenID via Facebook and Github.
-Once logged in, they are met with a dashboard displaying different items:
+>    Once logged in, they are met with a dashboard displaying different items:
 
 2. The output of the program should be:
     - A `dashbaord preview`: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
