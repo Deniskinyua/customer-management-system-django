@@ -59,10 +59,10 @@ Vuala!
 >    5. You can create a database or use the default `postgres` database 
 >       - `CREATE DATABASE <database-name>`: 
 
->    5.  Grant all privileges to the created user 
+>    6.  Grant all privileges to the created user 
 >       - `GRANT ALL PRIVILEGES ON DATABASE <database-name> to <preferred-user`:
 
->    5. Remember to uodate your .env file with the details created
+>    7. Remember to uodate your .env file with the details created
 
 ### Bulding the Project 
 
