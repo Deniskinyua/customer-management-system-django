@@ -45,23 +45,23 @@ Vuala!
 ### Prerequisites
 - You can spin up a postgres container instance with the following process
 >    1. Install docker, start the daemon and pull Postres image
->       - `docker pull postgres`:
+>       - `docker pull postgres`
 
 >    2. Create an instance: 
 >       - `docker run -d -e POSTGRES_USER=<user> -e POSTGRES_PASSWORD=<preferred-password> --name postgres-container -p 5432:5432 postgres`: 
 
 >    3. Access the created instance: 
->       - `docker exec -it postgres-container bash`:
+>       - `docker exec -it postgres-container bash`
 
 >    4. login: 
->       - `psql -h localhost -U user`:
+>       - `psql -h localhost -U user`
 
 >    5. You can create a database or use the default `postgres` database 
->       - `CREATE DATABASE <database-name>`:
+>       - `CREATE DATABASE <database-name>`
 >       - 
 
 >    6.  Grant all privileges to the created user 
->        - `GRANT ALL PRIVILEGES ON DATABASE <database-name> to <preferred-user`:    
+>        - `GRANT ALL PRIVILEGES ON DATABASE <database-name> to <preferred-user`    
 
 >    7. Remember to update your `.env` file with the details created
 
@@ -72,7 +72,7 @@ Vuala!
   `source my-env/bin/activate `
 - Then build:
  `docker-compose up --build`
-- Expect the project to be running at `port : 8000`
+- Expect the project to be running at `localhost:8000`
 
 - Then have a look at the system design and CI-CD designs below
 
@@ -82,3 +82,10 @@ Vuala!
 ## CI/CD Pipeline
 
 ![system design](images/ci-cd.png)
+
+### Future Improvements
+- UI Design
+- Internal feature improvement
+
+@octocat :+1:  :shipit:
+
