@@ -62,7 +62,7 @@ Vuala!
 >    6.  Grant all privileges to the created user 
 >       - `GRANT ALL PRIVILEGES ON DATABASE <database-name> to <preferred-user`:
 
->    7. Remember to uodate your .env file with the details created
+>    7. Remember to update your `.env` file with the details created
 
 ### Bulding the Project 
 
