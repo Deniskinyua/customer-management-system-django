@@ -73,8 +73,8 @@ Vuala!
 - Then build:
  `docker-compose up --build`
 >    Expect the project to be running at `localhost:8000`
-- Expect the project to be running at `localhost:8000`
-- Check out my hosted application on Render: `http://0.0.0.0:8000` 
+
+>    Check out my hosted application on Render: `http://0.0.0.0:8000` 
 
 - Then have a look at the system design and CI-CD designs below
 
