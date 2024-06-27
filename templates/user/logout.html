@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+{% block title %}Logout Page{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row my-4">
+    <div class="col-md-6 offset-md-3">
+        <div class="border p-3 bg-white">
+            <h4>Logout Page</h4>
+            <hr>
+            <div class="container">
+            {% if messages %}
+              {% for message in messages%}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {% endfor %}
+            {% endif %}
+
+           </div>
+            <a href="{% url 'user-login' %}">Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

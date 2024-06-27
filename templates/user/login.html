@@ -1,0 +1,29 @@
+{% extends 'partials/base.html'%}
+{% block title %} Login Page {% endblock%}
+{% load crispy_forms_tags %}
+
+{% block content%}
+ <div class="container">
+   <div class="row mt-5">
+     <div class="col-md-6">
+       <div class="border p-3 bg-white">
+         <h3> Login Page</h3>
+         <form method=POST>
+           {% csrf_token %}
+           {{ form|crispy }}
+           <input class="btn btn-success" type="submit" value="Login">
+         </form>
+         <h5>OR</h5>
+         <!--Facebook Login-->
+         <div>
+            <br>
+            <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+            <br>
+            <h5>OR</h5>
+            <a href="{% url 'social:begin' 'github' %}">Login with Github</a> <br/>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+{% endblock %}

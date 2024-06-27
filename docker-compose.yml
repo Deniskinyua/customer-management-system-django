@@ -1,0 +1,31 @@
+version: '3.9'
+
+
+services:
+  cms-app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    command: ["sh", "./start.sh"]
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - postgres-container
+
+  postgres-container:
+    image: postgres
+    volumes:
+      - postgres:/var/lib/postgres/data
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER={DB_USER}
+      - POSTGRES_PASSWORD={DB_PASSWORD}
+    # ports:
+    #   - 5433:5433
+
+volumes:
+  postgres:
+

@@ -1,0 +1,94 @@
+<!--Top Navigation-->
+
+<html>
+    <head>
+        {% load static %}
+        {% load crispy_forms_tags %}
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="{%static 'css/stylesheet.css' %}" rel="stylesheet">
+    </head>
+    </body>
+        <div class="container">
+            <div class="row justify-content-evenly mt-4">
+                <!--#1 Recent Invoices-->
+                <div class="col-md-3">
+                    <div class="recent">
+                        <span class=""> Recent Invoices</span>
+                        <span class=""> {{total_invoices}}</span>
+                        <br>
+                        <br>
+                        {% for instance in queryset %}
+                            <div class="card">
+                                <div class="">{{instance.customer_name}}</div>
+                                <div class="">{{instance.invoice_date}}</div>
+
+                            <div class=" ">${{instance.total}}</div>
+                        </div>
+                            <br>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+
+
+                <!--#2 Statistics Card-->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white text-center">
+                            Statistics
+                        </div>
+                        <!--card body-->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-customer'%}">
+                                        <div class="card my-card shadow text-center p-3">
+                                            <h5>Customer <i class="fas fa-users"></i></h5>
+                                            <h5>4</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--products-->
+                                <div class="col-md-4">
+                                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-product'%}">
+                                        <div class="card my-card shadow text-center p-3">
+                                            <h5>Products <i class="fas fa-box"></i></h5>
+                                            <h5>4</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--Orders-->
+                                <div class="col-md-4">
+                                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-orders'%}">
+                                        <div class="card my-card shadow text-center p-3">
+                                            <h5>Orders <i class="fas fa-shipping-fast"></i></h5>
+                                            <h5>4</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--End Orders-->
+                            </div>
+                        </div>
+                        <!--End card body-->
+                    </div>
+                </div>
+
+                <!-- #3 Forms Here-->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-info text-white text-center">
+                            Invoices
+                        </div>
+                        <div class="card-body">
+                                <h3 class="my-4">Invoices</h3>
+                                <a class="create-invoice text-decoration-none" href="{% url 'invoice'%}">
+                                    <input class="btn btn-success " type="" value="Create Invoice">
+                                </a>
+                        </div>
+                    </div>
+                </div>
+                <!--End Forms-->
+            </div>
+        </div>
+    </body>
+</html>
