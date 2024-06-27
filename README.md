@@ -9,10 +9,14 @@ The application works as follows:
 
 1. so,the user (shop owner / staff) registers at the login page. They can do so in 3 ways: via django authentication, or OpenID via Facebook and Github.
 Once logged in, they are met with a dashboard displaying different items:
-2. First list item
-       - First nested list item
-         - Second nested list item
-         - 
+- The output of the program should be:
+  - The number, followed by
+    - if the number is greater than 0: is positive
+    - if the number is 0: is zero
+    - if the number is less than 0: is negative
+  - followed by a new line
+  - :wq
+  - 
    _ A dashbaord preview: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
    _ A complete statistics dashboard : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
    _ Invoice creation page : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
