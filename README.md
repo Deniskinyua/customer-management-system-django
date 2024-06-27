@@ -8,7 +8,7 @@ The application works as follows:
 > But first, imagine this: You own a shop selling different items for example phones, accessories e.t.c. You would like to have an in-house system that helps yomanage customer orders, right? perfect. I have the right solution for you.
 
 #### An Overview of the workflow
-
+![app](images/app.png)
 
 >    1. so,the user (shop owner / staff) registers at the login page. They can do so in 2 ways:
 >       - via django authentication,
