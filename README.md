@@ -4,4 +4,5 @@
 ![system design] (./images/system-design-primer.png)
 
 ## CI/CD Pipeline
-![ci cd pipeline] (./images/ci-cd.png)
+
+![system design](images/ci-cd.png)
