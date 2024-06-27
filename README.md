@@ -13,7 +13,7 @@ The application works as follows:
 #### Message Confirmation
 ![app](images/order-placed.png)
 
-Kindly refer to the above (attached workflow)
+Kindly refer to the above (attached) workflow
 
 >    1. So, user (shop owner / staff) registers at the login page. They can do so in 2 ways:
 >       - via django authentication,
