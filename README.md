@@ -14,7 +14,6 @@ Once logged in, they are met with a dashboard displaying different items:
     - A `dashbaord preview`: ( Enables them to view the 5 latest invoices/receipts/notes provided or issued)
     - A complete `statistics dashboard` : Displays a breakdown of different items (customers, orders and ino), and (i've saved the best for last..)
     - `Invoice creation page` : They will use this to create different entries especially invoices, receipts e.t.c. How does it work?
-    - if the number is less than 0: is negative
 3. User clicks the create invoices button, and is transferred to an invoice creattion page
 4. They enter the details of the entry (notice that you can add colums if more entries are required per customer)
 5. The entry autocalculates all entries into one entry ( you dont want to have too many reciepts for just one order)
