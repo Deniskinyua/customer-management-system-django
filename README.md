@@ -13,7 +13,9 @@ The application works as follows:
 #### Message Confirmation
 ![app](images/order-placed.png)
 
->    1. so,the user (shop owner / staff) registers at the login page. They can do so in 2 ways:
+Kindly refer to the above (attached workflow)
+
+>    1. So, user (shop owner / staff) registers at the login page. They can do so in 2 ways:
 >       - via django authentication,
 >       - OpenID via Facebook and Github.
 - Once logged in, they are met with a dashboard displaying different items:
