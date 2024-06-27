@@ -42,6 +42,30 @@ The application works as follows:
 Vuala! 
 
 ## Setup
+### Prerequisites
+- You can spin up a postgres container instance with the following process
+>    1. Install docker, start the daemon and pull Postres image
+>       - `docker pull postgres`:
+
+>    2. Create an instance: 
+>       - `docker run -d -e POSTGRES_USER=<user> -e POSTGRES_PASSWORD=<preferred-password> --name postgres-container -p 5432:5432 postgres`: 
+
+>    3. Access the created instance: 
+>       - `docker exec -it postgres-container bash`:
+
+>    4. login: 
+>       - `psql -h localhost -U user`:
+
+>    5. You can create a database or use the default `postgres` database 
+>       - `CREATE DATABASE <database-name>`: 
+
+>    5.  Grant all privileges to the created user 
+>       - `GRANT ALL PRIVILEGES ON DATABASE <database-name> to <preferred-user`:
+
+>    5. Remember to uodate your .env file with the details created
+
+### Bulding the Project 
+
  - You can build the project with the following command
  - Activate the python environment
   `source my-env/bin/activate `
