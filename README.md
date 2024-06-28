@@ -72,8 +72,6 @@ Vuala!
  - You can build the project with the following command
  - Activate the python environment
   `source my-env/bin/activate `
- - run the requirements text file:
-   `pip install -r requirements.txt`
 - Then build:
  `docker-compose up --build`
 >    Expect the project to be running at `localhost:8000`
