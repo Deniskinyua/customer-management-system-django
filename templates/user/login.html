@@ -6,21 +6,37 @@
  <div class="container">
    <div class="row mt-5">
      <div class="col-md-6">
-       <div class="border p-3 bg-white">
-         <h3> Login Page</h3>
-         <form method=POST>
-           {% csrf_token %}
-           {{ form|crispy }}
-           <input class="btn btn-success" type="submit" value="Login">
-         </form>
-         <h5>OR</h5>
-         <!--Facebook Login-->
+       <div class="border p-3 bg-white ">
+          <div class="text-center">
+            <h3> Login Page</h3>
+            <br>
+          </div>
+
+          <div class="col-md-6">
+            <form method=POST>
+              {% csrf_token %}
+              {{ form|crispy }}
+              <input class="btn btn-success text-center" type="submit" value="Login">
+            </form>
+          </div>
+          <br>
+          <div class="text-center">
+           <h7>------ or login using -------</h7>
          <div>
+          <br>
+
+         <!--Facebook Login-->
+         <div class="text-center">
+            <a class="facebook text-decoration-none" href="{% url 'social:begin' 'facebook' %}">
+              <input class="btn btn-success bg-primary" type="" value="Facebook">
+            </a>
             <br>
-            <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+
             <br>
-            <h5>OR</h5>
-            <a href="{% url 'social:begin' 'github' %}">Login with Github</a> <br/>
+            <a class="facebook text-decoration-none" href="{% url 'social:begin' 'github' %}">
+              <input class="btn btn-secondary bg-secondary" type="" value="GitHub">
+            </a>
+          </div>
          </div>
        </div>
      </div>

@@ -11,58 +11,60 @@
         <div class="container">
             <div class="row justify-content-evenly mt-4">
                 <!--#1 Recent Invoices-->
-                <div class="col-md-3">
-                    <div class="recent">
-                        <span class=""> Recent Invoices</span>
-                        <span class=""> {{total_invoices}}</span>
-                        <br>
-                        <br>
-                        {% for instance in queryset %}
-                            <div class="card">
-                                <div class="">{{instance.customer_name}}</div>
-                                <div class="">{{instance.invoice_date}}</div>
 
-                            <div class=" ">${{instance.total}}</div>
+                        <div class="col-md-3">
+                            <div class="recent">
+                                <div class="bg-light shadow text-center">
+                                    <span class=""> Recent Invoices</span>
+                                    <span class=""> {{total_invoices}}</span>
+                                </div>
+                                <br>
+                                <br>
+                                {% for instance in queryset %}
+                                <!-- Recursive card-->
+                                    <div class="bg-light my-card shadow text-center p-2" >
+                                        <div class="col-md-3 d-inline-flex p-2 ">
+                                            {{instance.customer_name}}
+                                        </div>
+                                        <div class=" col-md-3d-inline-flex p-2 ">
+                                            {{instance.invoice_date}}
+                                        </div>
+
+                                        <div class="col-md-3 d-inline-flex p-2 ">
+                                            ${{instance.total}}
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                {% endfor %}
+
+                            </div>
                         </div>
-                            <br>
-                        {% endfor %}
-                        
-                    </div>
-                </div>
 
 
                 <!--#2 Statistics Card-->
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-header bg-info text-white text-center">
+                        <div class="card-header bg-secondary text-white text-center">
                             Statistics
                         </div>
                         <!--card body-->
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <a class="text-decoration-none text-dark" href="{% url 'dashboard-customer'%}">
                                         <div class="card my-card shadow text-center p-3">
                                             <h5>Customer <i class="fas fa-users"></i></h5>
-                                            <h5>4</h5>
+                                            <span class=""> {{total_invoices}}</span>
                                         </div>
                                     </a>
                                 </div>
-                                <!--products-->
-                                <div class="col-md-4">
-                                    <a class="text-decoration-none text-dark" href="{% url 'dashboard-product'%}">
-                                        <div class="card my-card shadow text-center p-3">
-                                            <h5>Products <i class="fas fa-box"></i></h5>
-                                            <h5>4</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--Orders-->
-                                <div class="col-md-4">
+                                <!--Orders here-->
+                                <div class="col-md-6">
                                     <a class="text-decoration-none text-dark" href="{% url 'dashboard-orders'%}">
                                         <div class="card my-card shadow text-center p-3">
                                             <h5>Orders <i class="fas fa-shipping-fast"></i></h5>
-                                            <h5>4</h5>
+                                            <span class=""> {{total_invoices}}</span>
                                         </div>
                                     </a>
                                 </div>
@@ -76,13 +78,18 @@
                 <!-- #3 Forms Here-->
                 <div class="col-md-3">
                     <div class="card">
-                        <div class="card-header bg-info text-white text-center">
+                        <div class="card-header bg-secondary text-white text-center">
                             Invoices
                         </div>
                         <div class="card-body">
                                 <h3 class="my-4">Invoices</h3>
                                 <a class="create-invoice text-decoration-none" href="{% url 'invoice'%}">
-                                    <input class="btn btn-success " type="" value="Create Invoice">
+                                    <input class="btn btn-success " type="" value="create invoice">
+                                </a>
+                                <br>
+                                <br>
+                                <a class="create-invoice text-decoration-none" href="{% url 'invoice_view'%}">
+                                    <input class="btn btn-success bg-secondary" type="" value="view invoices">
                                 </a>
                         </div>
                     </div>

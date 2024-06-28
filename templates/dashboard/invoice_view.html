@@ -1,12 +1,14 @@
 {% load static %}
 {% load crispy_forms_tags %}
+{%include 'partials/nav.html'%}
+
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="{%static 'css/stylesheet.css' %}" rel="stylesheet">
         <title><h5>Invoices List</h5></title>
     </head>
-    <body class="body p-4">
+    <body>
         <div class="container border rounded border-primary">
             <div class="col-md-4 offset-md-6 p-2">
                 {{title}}
