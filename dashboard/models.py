@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 # Create your models here.
 CATEGORY = (
@@ -31,9 +33,11 @@ class Order(models.Model):
 class Invoice(models.Model):
     #Main Details
     comments = models.TextField(max_length= 3000, default='', blank=True, null=True)
-    invoice_no = models.IntegerField(null=True, blank=True)
+    invoice_no = models.IntegerField(null=True, blank=True, unique=True)
     invoice_date=models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True)
+
     customer_name=models.CharField('Customer Name', max_length=120, default='', blank=True, null=True)
+    contact=PhoneNumberField(blank=True)
 
     #Entries #1
     fe= models.CharField('First Entry', max_length=120, default='', blank=True, null=True)
@@ -62,7 +66,6 @@ class Invoice(models.Model):
     ffe_totals= models.IntegerField('Totals', max_length=120, default=0, blank=True, null=True)
 
     #Details
-    contact = models.CharField(max_length=120, default='', blank=True, null=True)
     total = models.IntegerField(default=0,  blank=True, null=True)
     balance = models.IntegerField(default=0,  blank=True, null=True)
     time =models.DateTimeField(auto_now_add=True, auto_now=False)

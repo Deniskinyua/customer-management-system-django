@@ -1,5 +1,7 @@
 from django import forms
 from .models import Invoice
+from django.forms.widgets import DateInput
+
 
 
 #Populate invoice form
@@ -14,11 +16,21 @@ class InvoiceForm(forms.ModelForm):
                    'ffe', 'ffe_quantity', 'ffe_unit_price', 'ffe_totals',
                   'total', 'paid', 'inv_selection',
                   ]
+        widgets = {
+            'invoice_date': DateInput(attrs={'type': 'date'}),
+        }
+
     def clean_invoice_no(self):
         invoice_no = self.cleaned_data.get('invoice_no')
         if not invoice_no:
             raise forms.ValidationError('Invoice number is required')
         return invoice_no
+
+    def clean_invoice_date(self):
+        invoice_date = self.cleaned_data.get('invoice_date')
+        if not invoice_date:
+            raise forms.ValidationError('Invoice date is required')
+        return invoice_date
 
     def clean_customer_name(self):
         customer_name = self.cleaned_data.get('customer_name')
@@ -62,6 +74,12 @@ class UpdateInvoice(forms.ModelForm):
         if not invoice_no:
             raise forms.ValidationError('Invoice number is required')
         return invoice_no
+
+    def clean_invoice_date(self):
+        invoice_date = self.cleaned_data.get('invoice_date')
+        if not invoice_date:
+            raise forms.ValidationError('Invoice date is required')
+        return invoice_date
 
     def clean_customer_name(self):
         customer_name = self.cleaned_data.get('customer_name')
